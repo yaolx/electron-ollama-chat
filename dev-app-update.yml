@@ -1,0 +1,4 @@
+owner: yaolx
+repo: electron-boat
+provider: github
+updaterCacheDirName: electron-boat-updater

@@ -1,0 +1,63 @@
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.x-edu-loading.fish-spin {
+  width: 100%;
+  margin-top: 80px;
+  .fish-spin-indicator {
+    position: static; // ie11 兼容
+    height: 48px;
+    width: 48px;
+    transform: translate(0, 0); // ie11 兼容
+    animation: spin 1s linear infinite;
+    border-radius: 50%;
+  }
+}
+
+// fish 3.x版本loading样式ie11兼容
+// TODO 去掉fish 3.x版本后, 可以去除此处代码
+.fish-spin-nested-loading > div > .fish-spin .fish-spin-text {
+  position: static;
+  color: #666;
+  font-size: 14px;
+  margin-top: 34px;
+}
+
+// 内容内嵌到 Loading 中时
+.x-edu-nested-loading {
+  min-height: 222px;
+
+  & > div > .center {
+    // 上下居中
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 222px;
+  }
+
+  & > div > .x-edu-loading .fish-spin-text {
+    top: unset;
+    padding-top: 0 !important;
+  }
+}
+
+.x-edu-loading.center {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 222px;
+  .fish-spin-text {
+    position: static;
+    color: #666;
+    font-size: 14px;
+    margin-top: 34px;
+  }
+}

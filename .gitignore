@@ -1,0 +1,12 @@
+node_modules
+dist
+out
+*.log*
+.vscode/
+asset/chromium/
+*.mjs
+pnpm-lock.yaml
+keys/ca.crt
+keys/ca.key
+keys/cert.crt
+keys/cert.key

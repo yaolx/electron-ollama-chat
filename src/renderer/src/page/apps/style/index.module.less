@@ -1,0 +1,142 @@
+.appList {
+  display: flex;
+  flex-direction: column;
+  background: #f7f8fa;
+  padding: 0 20px;
+  .tabs {
+    display: flex;
+    font-size: 14px;
+    color: #333;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #e5e8f0;
+    position: relative;
+    .tab {
+      margin-right: 30px;
+      max-width: 100px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      color: #333;
+      &:hover {
+        color: #1e62ec;
+      }
+      &.recentTab {
+        color: #393e47;
+        font-weight: normal;
+      }
+      &.active {
+        color: #1e62ec;
+        font-weight: bold;
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          height: 2px;
+          background-color: #1e62ec;
+          right: 25%;
+          left: 25%;
+        }
+      }
+    }
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 16px;
+    gap: 20px;
+  }
+}
+
+.app {
+  height: 100%;
+  background-color: #f7f8fa;
+  position: relative;
+  .tabs {
+    height: 100%;
+    :global {
+      .ant-tabs-tab {
+        width: auto;
+        height: 40px;
+        padding: 0 10px;
+        margin: 0 !important;
+        .ant-tabs-tab-btn {
+          width: 100%;
+        }
+      }
+      .ant-tabs-nav {
+        margin: 0 !important;
+      }
+      .ant-tabs-tab-active {
+        background-color: #fff;
+      }
+      .ant-tabs-content,
+      .ant-tabs-tabpane {
+        height: 100%;
+      }
+    }
+  }
+  .tabTitle {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .delete {
+      margin: 0 10px;
+      font-size: 16px;
+      &.hidden {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+.appItem {
+  position: relative;
+  .content {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 14px 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    &:hover {
+      background: #fff;
+      box-shadow: 0px 4px 10px 0px rgba(30, 98, 236, 0.12);
+      a {
+        color: #1e62ec;
+      }
+    }
+  }
+  .icon {
+    color: #2d8cf0;
+  }
+  .title {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666;
+  }
+  .delete {
+    color: red;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}
+
+.add {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}

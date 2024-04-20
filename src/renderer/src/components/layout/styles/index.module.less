@@ -1,0 +1,138 @@
+.layout {
+  height: 100vh;
+  width: 100%;
+}
+.center {
+  background-color: #3d4b6d;
+}
+.header {
+  width: 100%;
+  height: 40px !important;
+  line-height: 40px !important;
+  padding-inline: 10px !important;
+  background: #333e5e !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .logo {
+    color: #1890ff;
+  }
+  .drag_area {
+    -webkit-app-region: drag;
+    height: 100%;
+    flex: auto;
+  }
+  .oper_btns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    .btn {
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  }
+}
+
+.folder {
+  position: absolute;
+  display: inline-flex;
+  bottom: 3px;
+  right: -19px;
+  color: #1890ff;
+  font-size: 20px;
+  z-index: 1;
+  &.collapsed {
+    right: 0;
+    color: #fff;
+  }
+}
+
+.sider {
+  background: linear-gradient(164deg, #3e4c6f -2%, #29304f 56%, #3d4b6d 117%) !important;
+  &.collapsed {
+    width: 160px !important;
+    flex: 0 0 160px !important;
+    max-width: 160px !important;
+    min-width: 160px !important;
+  }
+}
+
+.setting {
+  margin-right: 10px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 14px 0;
+  .avatar {
+    width: 50px;
+    height: 50px;
+    background-image: url(../../../assets/avatar.jpg);
+    background-size: 100% 100%;
+    border-radius: 50%;
+  }
+  .name {
+    color: #fff;
+    font-size: 14px;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 15px;
+}
+.menu_item {
+  padding: 12px 10px;
+  cursor: pointer;
+  text-align: left;
+  margin: 5px 0;
+  display: flex;
+  &:hover,
+  &.active {
+    background: #1e2b45b3;
+    color: #fff;
+  }
+  .menu_title {
+    margin-left: 10px;
+  }
+}
+.content {
+  border-top-left-radius: 8px;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.update {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  .title {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .text {
+    text-align: center;
+    width: 80%;
+    .tip {
+      margin-bottom: 10px;
+    }
+  }
+  div {
+    flex: 1;
+  }
+}
+
+.config {
+  padding-top: 20px;
+}

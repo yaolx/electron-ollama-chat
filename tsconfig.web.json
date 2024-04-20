@@ -1,0 +1,38 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+  "include": [
+    "src/renderer/src/env.d.ts",
+    "src/renderer/src/**/*",
+    "src/renderer/src/**/*.tsx",
+    "src/preload/*.d.ts"
+  ],
+  "exclude": ["src/preload/src/lib/**/*"],
+  "compilerOptions": {
+    "composite": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "noEmit": true,
+    "allowJs": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "strict": true,
+    "importHelpers": true,
+    "noImplicitAny": false,
+    // 模块的解析策略
+    "moduleResolution": "node",
+    // 允许编译javascript文件
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "useDefineForClassFields": true,
+    "isolatedModules": true,
+    // 允许从没有设置默认导出的模块中默认导入
+    "allowSyntheticDefaultImports": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "resolveJsonModule": true,
+    "paths": {
+      "@/*": [
+        "src/renderer/src/*"
+      ]
+    }
+  }
+}
